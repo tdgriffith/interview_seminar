@@ -1,7 +1,8 @@
 # Defense repo
-Slides for our ACC 2022 paper. 
+Slides for post PhD interviews.
 
-https://tdgriffith.github.io/acc_slides/
+
+https://tdgriffith.github.io/interview_seminar/
 
 ## Previewing locally
 
