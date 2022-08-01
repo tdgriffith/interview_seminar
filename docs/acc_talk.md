@@ -62,7 +62,7 @@ background: #eaeaea;
 
 <div class="col">
 
-<ul style="font-size:2vw">
+<ul style="font-size:1.75vw">
 <li style="padding-bottom:0.9em"> This talk is not:</li>
 <ul>
   <li style="padding-bottom:0.9em"> An argument for adaptive control in every system always</li>
@@ -75,7 +75,7 @@ background: #eaeaea;
 
 
 <div class="col">
-<ul style="font-size:2vw">
+<ul style="font-size:1.75vw">
 <li style="padding-bottom:0.9em"> This talk is:</li>
 <ul>
   <li style="padding-bottom:0.9em"> Something I like talking about</li>
@@ -122,14 +122,13 @@ background: #eaeaea;
 
 <div class="col">
 
-<ul style="font-size:1.5vw">
+<ul style="font-size:1.3vw">
 <li style="padding-bottom:0.9em">Classical vs. stochastic vs. adaptive control </li>
 <li style="padding-bottom:0.9em"> Flight and Space Structure Needs:</li>
 <ul>
   <li style="padding-bottom:0.9em"> Operating in a poorly known environment</li>
   <li style="padding-bottom:0.9em"> Are experiments equivalent to actual operation?</li>
   <li style="padding-bottom:0.9em"> Many degrees of freedom</li>
-  <li style="padding-bottom:0.9em"> Highly oscillatory</li>
   <li style="padding-bottom:0.9em"> Finite element models are only as good as the physics</li>
   <li style="padding-bottom:0.9em"> Changing situations: takeoff, deployment, landing</li>
   <li style="padding-bottom:0.9em"> Control schemes based on reduced order models </li>
@@ -177,7 +176,7 @@ background: #eaeaea;
 
 <div class="col">
 
-<ul style="font-size:2vw">
+<ul style="font-size:1.3vw">
 <li style="padding-bottom:0.9em">Conceptually: </li>
 <ul>
   <li style="padding-bottom:0.9em"> A system with knowledge of its performance and the potency to improve it.</li>
@@ -238,7 +237,7 @@ background: #eaeaea;
 
 <div class="col">
 
-<ul style="font-size:1.5vw">
+<ul style="font-size:1.0vw">
 <li style="padding-bottom:0.9em">Double integrator: </li>
 <ul>
   <li style="padding-bottom:0.9em"> $\dot{x} = Ax+Bu, \ y=Cx$</li>
@@ -298,7 +297,7 @@ background: #eaeaea;
 
 <div class="col">
 
-<ul style="font-size:1.5vw">
+<ul style="font-size:1.0vw">
 <li style="padding-bottom:0.9em">But <em><strong>suppose $A$ became $\tilde{A}$:</em></strong></li>
 <ul>
   <li style="padding-bottom:0.9em"> $\dot{x} = \tilde{A}x+Bu, \ y=Cx$</li>
@@ -358,7 +357,7 @@ background: #eaeaea;
 
 <div class="col">
 
-<ul style="font-size:1.5vw">
+<ul style="font-size:1.0vw">
 <li style="padding-bottom:0.9em">But suppose $A$ became $\tilde{A}$ and <em><strong>I have augmented the system with an adaptive outer loop:</em></strong></li>
 <ul>
   <li style="padding-bottom:0.9em"> $\dot{x} = \tilde{A}x+Bu, \ y=Cx$</li>
@@ -417,7 +416,7 @@ background: #eaeaea;
 
 <div class="col">
 
-<ul style="font-size:2vw">
+<ul style="font-size:1.3vw">
 <li style="padding-bottom:0.9em">Does this happen with gain scheduled controllers?</li>
 <li style="padding-bottom:0.9em">We treated a significant constant perturbation adaptively</li>
 <li style="padding-bottom:0.9em">Remark: Adaptive controllers are especially good at handling significant, slower disturbances</li>
@@ -474,7 +473,7 @@ background: #eaeaea;
 </style>
 
 
-<ul style="font-size:2vw">
+<ul style="font-size:1.3vw">
 <li style="padding-bottom:0.9em">Given:</li>
 <ul>
   <li style="padding-bottom:0.9em"> $ \begin{cases} \dot{x} &= Ax+Bu \\\ y&=Cx \end{cases}$</li>
@@ -512,7 +511,7 @@ background: #eaeaea;
 }
 </style>
 
-<ul style="font-size:1.75vw">
+<ul style="font-size:1.3vw">
   <li style="padding-bottom:0.9em"> Sufficient conditions for arb. pole placement but we must <em><strong>know</em></strong> $(A,B,C)$ in detail to find `$G_*$`!</li>
   <li style="padding-bottom:0.9em"> This can be onerous, but if `$G_*$` exists, the system is called output feedback stabilizable</li>
 <li style="padding-bottom:0.9em">Ex:</li>
@@ -555,7 +554,7 @@ background: #eaeaea;
 
 <div class="col">
 
-<ul style="font-size:2vw">
+<ul style="font-size:1.3vw">
   <li style="padding-bottom:0.9em"> Plant: $ \begin{cases} \dot{x} &= Ax+Bu \\\ y&=Cx \end{cases}$ (square)</li>
   <li style="padding-bottom:0.9em"> Regulator: $ \begin{cases} u &= Gy \\\ \dot{G}&=-yy^T \sigma \end{cases}$</li>
   <li style="padding-bottom:0.9em"> Let `$G \equiv G_\ast + \Delta G$`. Closed loop system is:</li>
@@ -603,7 +602,7 @@ background: #eaeaea;
 
 <div class="col">
 
-<ul style="font-size:2vw">
+<ul style="font-size:1.3vw">
   <li style="padding-bottom:0.9em"> If a scalar function $V(x,t)$ satisfies</li>
   <ul>
   <li style="padding-bottom:0.9em"> function is lower bounded</li>
@@ -762,7 +761,7 @@ background: #eaeaea;
 
 <div class="col">
 
-<ul style="font-size:1.5vw">
+<ul style="font-size:1.3vw">
 <li style="padding-bottom:0.9em">Returning to our double integrator example:</em></strong></li>
 <ul>
   <li style="padding-bottom:0.9em"> $\dot{x} = \tilde{A}x+Bu, \ y=Cx$</li>
@@ -818,7 +817,7 @@ background: #eaeaea;
 
 <div class="col">
 
-<ul style="font-size:1.5vw">
+<ul style="font-size:1.3vw">
 <li style="padding-bottom:0.9em">Returning to our double integrator example:</em></strong></li>
 <ul>
   <li style="padding-bottom:0.9em"> $\dot{x} = \tilde{A}x+Bu, \ y=Cx$</li>
