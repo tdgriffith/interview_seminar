@@ -32,6 +32,66 @@
 
 <section>
 <h1> Why Study Adaptive Control? </h1>
+<h2> What this talk is and what it is not</h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.reveal blockquote {
+text-align: center;
+width: 65%;
+border: solid;
+box-shadow: none;
+background: #eaeaea;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<ul style="font-size:2vw">
+<li style="padding-bottom:0.9em"> This talk is not:</li>
+<ul>
+  <li style="padding-bottom:0.9em"> An argument for adaptive control in every system always</li>
+  <li style="padding-bottom:0.9em"> A chance for me to look smart by being confusing</li>
+  <li style="padding-bottom:0.9em"> An overview of everything adaptive control</li>
+  </ul>
+</ul> 
+</div>
+
+
+
+<div class="col">
+<ul style="font-size:2vw">
+<li style="padding-bottom:0.9em"> This talk is:</li>
+<ul>
+  <li style="padding-bottom:0.9em"> Something I like talking about</li>
+  <li style="padding-bottom:0.9em"> Technically relevant</li>
+  <li style="padding-bottom:0.9em"> Presents compelling theoretical challenges</li>
+  </ul>
+</ul> 
+
+
+
+</div>
+</div>
+</section>
+
+<section>
+<h1> Why Study Adaptive Control? </h1>
 <h2> Some perspectives </h2>
 <style>
 .vertical-center {
@@ -40,6 +100,14 @@
 
   display: flex;
   align-items: center;
+}
+
+.reveal blockquote {
+text-align: center;
+width: 65%;
+border: solid;
+box-shadow: none;
+background: #eaeaea;
 }
 
 .container{
@@ -64,9 +132,9 @@
   <li style="padding-bottom:0.9em"> Highly oscillatory</li>
   <li style="padding-bottom:0.9em"> Finite element models are only as good as the physics</li>
   <li style="padding-bottom:0.9em"> Changing situations: takeoff, deployment, landing</li>
-  <li style="padding-bottom:0.9em"> Control schemes based on <strong><em>reduced order models</em></strong> </li>
+  <li style="padding-bottom:0.9em"> Control schemes based on reduced order models </li>
   </ul>
-  <li style="padding-bottom:0.9em"> Greatly emphasizes local vs. global, linear vs. nonlinear thinking</li>
+  <li style="padding-bottom:0.9em"> <strong><em>Greatly emphasizes local vs. global, linear vs. nonlinear thinking </em></strong></li>
 </ul> 
 </div>
 
@@ -109,15 +177,14 @@
 
 <div class="col">
 
-<ul style="font-size:1.5vw">
+<ul style="font-size:2vw">
 <li style="padding-bottom:0.9em">Conceptually: </li>
 <ul>
   <li style="padding-bottom:0.9em"> A system with knowledge of its performance and the potency to improve it.</li>
   </ul>
   <li style="padding-bottom:0.9em"> OR, more mathematically</li>
   <ul>
-  <li style="padding-bottom:0.9em"> A map $\mathcal{J}$ from $\mathcal{S}_r$ to $\mathcal{P}$ ($\mathcal{J}: \mathcal{S}_r \rightarrow \mathcal{P}$) with range $\mathcal{J}(\mathcal{S}) \subseteq \mathcal{P}_A$</li>
-  </ul>
+<blockquote>A map $\mathcal{J}$ from $\mathcal{S}_r$ to $\mathcal{P}$ ($\mathcal{J}: \mathcal{S}_r \rightarrow \mathcal{P}$) with range $\mathcal{J}(\mathcal{S}) \subseteq \mathcal{P}_A$</blockquote>
   <li style="padding-bottom:0.9em">Remark: All systems are adaptive in this definition with respect to some $\mathcal{S}_r$ and $\mathcal{P}_A$  </li>
 </ul> 
 </div>
@@ -197,7 +264,7 @@
 <div class="col">
 
 <figure>
-  <img src="img/seminar/step_re.png" alt="Trulli" width="800">
+  <img src="img/seminar/static.gif" alt="Trulli" width="600">
   <figcaption>Separation principle controller is stable.</figcaption>
 </figure>
 
@@ -232,7 +299,7 @@
 <div class="col">
 
 <ul style="font-size:1.5vw">
-<li style="padding-bottom:0.9em">But suppose $A$ became $\tilde{A}$:</li>
+<li style="padding-bottom:0.9em">But <em><strong>suppose $A$ became $\tilde{A}$:</em></strong></li>
 <ul>
   <li style="padding-bottom:0.9em"> $\dot{x} = \tilde{A}x+Bu, \ y=Cx$</li>
   <li style="padding-bottom:0.9em"> $\tilde{A}=\begin{bmatrix} 0 & 1 \\\ 0 & \color{red} 3 \end{bmatrix}$, $B=\begin{bmatrix} 0 \\\ 1 \end{bmatrix}$, $C=\begin{bmatrix} 1 &1 \end{bmatrix}$</li>
@@ -257,7 +324,7 @@
 <div class="col">
 
 <figure>
-  <img src="img/seminar/step_re_pert.png" alt="Trulli" width="800">
+  <img src="img/seminar/static_bad.gif" alt="Trulli" width="800">
   <figcaption>Perturbed separation principle controller is not stable.</figcaption>
 </figure>
 
@@ -292,7 +359,7 @@
 <div class="col">
 
 <ul style="font-size:1.5vw">
-<li style="padding-bottom:0.9em">But suppose $A$ became $\tilde{A}$ and I have augmented the system with an adaptive outer loop:</li>
+<li style="padding-bottom:0.9em">But suppose $A$ became $\tilde{A}$ and <em><strong>I have augmented the system with an adaptive outer loop:</em></strong></li>
 <ul>
   <li style="padding-bottom:0.9em"> $\dot{x} = \tilde{A}x+Bu, \ y=Cx$</li>
   <li style="padding-bottom:0.9em"> $\tilde{A}=\begin{bmatrix} 0 & 1 \\\ 0 & \color{red} 3 \end{bmatrix}$, $B=\begin{bmatrix} 0 \\\ 1 \end{bmatrix}$, $C=\begin{bmatrix} 1 &1 \end{bmatrix}$</li>
@@ -316,6 +383,57 @@
 <div class="col">
 
 <figure>
+  <img src="img/seminar/static_aug.gif" alt="Trulli" width="800">
+  <figcaption>Adaptive separation principle controller is stable.</figcaption>
+</figure>
+
+
+
+</div>
+</div>
+</section>
+
+<section>
+<h1> Augmentation example </h1>
+<h2> Recovering $\mathcal{P}_A$</h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<ul style="font-size:2vw">
+<li style="padding-bottom:0.9em">Does this happen with gain scheduled controllers?</li>
+<li style="padding-bottom:0.9em">We treated a significant constant perturbation adaptively</li>
+<li style="padding-bottom:0.9em">Remark: Adaptive controllers are especially good at handling significant, slower disturbances</li>
+<ul>
+  <li style="padding-bottom:0.9em"> Robust controllers are especially good at small, fast disturbances</li>
+  <li style="padding-bottom:0.9em"> $\therefore$ <em><strong> we should generally consider the adaptive augmentation of robust controllers.</em></strong></li>
+  </ul>
+</ul> 
+</ul> 
+</div>
+
+
+
+<div class="col">
+
+<figure>
   <img src="img/seminar/step_re_pert_adapt.png" alt="Trulli" width="800">
   <figcaption>Adaptive separation principle controller is stable.</figcaption>
 </figure>
@@ -331,6 +449,419 @@
 <!-- .slide: data-background="#003C71" class="dark" -->
 
 # Adaptive Control is not Complicated
+
+
+
+---
+
+<section>
+<h1> Adaptive Control is not Complicated </h1>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+
+<ul style="font-size:2vw">
+<li style="padding-bottom:0.9em">Given:</li>
+<ul>
+  <li style="padding-bottom:0.9em"> $ \begin{cases} \dot{x} &= Ax+Bu \\\ y&=Cx \end{cases}$</li>
+  <li style="padding-bottom:0.9em"> $(A,B,C)$ ctrb/obsv (i.e. <em><strong>minimal</em></strong> description of $P(s)=C(sI-A)^{-1}B$)</li>
+  </ul>
+<li style="padding-bottom:0.9em">Recall Kimura-Davison sufficient conditions:</li>
+<ul>
+  <li style="padding-bottom:0.9em"> $M \equiv \text{rank }  B = \text{rank } C = M$ (square)</li>
+  <li style="padding-bottom:0.9em"> $(A,B,C)$ ctrb/obsv</li>
+  <li style="padding-bottom:0.9em"> $M+P>N=\dim x$</li>
+  <ul>
+  <li style="padding-bottom:0.9em"> `$\exists G_{\ast} \ni \sigma(A+BG_{\ast}C)$` that assigns pole locations arbitrarily</li>
+  </ul>
+  </ul>
+</ul> 
+
+</section>
+
+<section>
+<h1> Adaptive Control is not Complicated </h1>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<ul style="font-size:1.75vw">
+  <li style="padding-bottom:0.9em"> Sufficient conditions for arb. pole placement but we must <em><strong>know</em></strong> $(A,B,C)$ in detail to find `$G_*$`!</li>
+  <li style="padding-bottom:0.9em"> This can be onerous, but if `$G_*$` exists, the system is called output feedback stabilizable</li>
+<li style="padding-bottom:0.9em">Ex:</li>
+<ul>
+  <li style="padding-bottom:0.9em"> $A = \begin{bmatrix} 0 & 1 \\\ 0 & 0 \end{bmatrix}$, $B = \begin{bmatrix} 0 \\\ 1  \end{bmatrix}$, $C = \begin{bmatrix} 1 & \varepsilon \end{bmatrix}$</li>
+  <li style="padding-bottom:0.9em">With `$G_\ast=-g$`, $A+BGC = \begin{bmatrix} 0 & 1 \\\ -g & -g\varepsilon \end{bmatrix}$</li>
+  <li style="padding-bottom:0.9em"> $\det (\lambda I -A_c) = \lambda^2 + g\varepsilon \lambda + g$ </li>
+  <li style="padding-bottom:0.9em"> $\therefore$ output feedback stabilizable when $\varepsilon > 0$ only!</li>
+  <ul>
+  <li style="padding-bottom:0.9em"> Note: $\exists P>0 \ni A_c^T P + P A_c = -Q>0$</li>
+  </ul>
+  </ul>
+</ul> 
+
+
+</section>
+
+
+<section>
+<h1> Adaptive Control is not Complicated </h1>
+<h3> Adaptive Regulator using Output Feedback Only</h3>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<ul style="font-size:2vw">
+  <li style="padding-bottom:0.9em"> Plant: $ \begin{cases} \dot{x} &= Ax+Bu \\\ y&=Cx \end{cases}$ (square)</li>
+  <li style="padding-bottom:0.9em"> Regulator: $ \begin{cases} u &= Gy \\\ \dot{G}&=-yy^T \sigma \end{cases}$</li>
+  <li style="padding-bottom:0.9em"> Let `$G \equiv G_\ast + \Delta G$`. Closed loop system is:</li>
+  <ul>
+  <li style="padding-bottom:0.9em"> `$\begin{cases} \dot{x} &= \underbrace{(A+BG_{\ast} C)}_{A_c} x+ B \underbrace{\Delta G y}_{w}  \\\ y&=Cx \\\ \Delta \dot{G} &= \dot{G}= -y y^T\sigma, \ \sigma>0 \end{cases}$`</li>
+  </ul>
+</ul> 
+</div>
+
+
+<div class="col">
+
+<figure>
+  <img src="img/seminar/reg_diag.png" alt="Trulli" width="800">
+  <figcaption>Adaptive regulator architecture.</figcaption>
+</figure>
+
+
+
+</div>
+</div>
+</section>
+
+<section>
+<h1> Adaptive Control is not Complicated </h1>
+<h3> Lyapunov Stability Argument</h3>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<ul style="font-size:2vw">
+  <li style="padding-bottom:0.9em"> If a scalar function $V(x,t)$ satisfies</li>
+  <ul>
+  <li style="padding-bottom:0.9em"> function is lower bounded</li>
+  <li style="padding-bottom:0.9em"> Time derivative $\dot{V}(x,t)$ is negative semidefinite: $\sigma \big(\dot{V}(x,t) \big)\leq 0$</li>
+  <li style="padding-bottom:0.9em"> Time derivative $\dot{V}(x,t)$ is uniformly continuous in $t$: derivative is bounded</li>
+  </ul>
+  <li style="padding-bottom:0.9em"> Then $\lim_{t \rightarrow \infty} \dot{V}(x,t)=0$</li>
+  <li style="padding-bottom:0.9em"> and we have a theoretical stability guarantee.</li>
+</ul> 
+</div>
+
+
+<div class="col">
+
+<figure>
+  <img src="img/seminar/lyap.png" alt="Trulli" width="500">
+  <figcaption>Example Lyapunov candidate function</figcaption>
+</figure>
+
+
+
+</div>
+</div>
+</section>
+
+
+<section>
+<h1> Adaptive Control is not Complicated </h1>
+<h3> Lyapunov Stability Argument</h3>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+
+
+<div class="col">
+
+<ul>
+<li style="padding-bottom:0.9em">Here, $P$ from $A\_c^{T} P + PA\_c = -Q$ yields a quadratic, lower bounded function</li>
+  <ul>
+  <li style="padding-bottom:0.9em">`$\begin{equation} \frac{\lambda_{\text{min}}(P)}{2} ||x||^2 \leq V_1(x) \equiv \frac{1}{2} x^\ast P x \leq \frac{\lambda_{\text{max}}(P)}{2} ||x||^2 \end{equation}$`</li>
+  <li style="padding-bottom:0.9em">which meets our first requirement.</li>
+  </ul>
+  <li style="padding-bottom:0.9em">Notice</li>
+  <ul>
+  <li style="padding-bottom:0.9em">`$\begin{align} \dot{V}_1(x) \equiv \triangle V_{1} \dot{x} &= x^* P [A_c x +Bw] \\\ &=x^* PA_c x + x^* PB w \\\ &\leq -\frac{1}{2}x^*Qx+ x^* C^* w \\\ &\leq -1/2 \lambda_{\text{min}}(Q) ||x||^2 +(y,w)  \end{align}$`</li>
+  <li style="padding-bottom:0.9em">which may or may not be negative semidefinite, but is bound.</li>
+  </ul>
+</ul> 
+
+</div>
+
+
+<div class="col">
+
+<figure>
+  <img src="https://tdgriffith.github.io/assets/images/James_Joseph_Sylvester.jpg" alt="Trulli" width="300">
+  <figcaption>James Joseph Sylvester</figcaption>
+</figure>
+
+
+
+</div>
+</div>
+</section>
+
+<section>
+<h1> Adaptive Control is not Complicated </h1>
+<h3> Lyapunov Stability Argument</h3>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+
+
+<div class="col">
+
+<ul>
+  <li style="padding-bottom:0.9em">`$\begin{align} \dot{V}_1(x) \leq -1/2 \lambda_{\text{min}}(Q) ||x||^2 +(y,w)  \end{align}$`</li>
+  <ul><li style="padding-bottom:0.9em">which may or may not be negative semidefinite, but is bound.</li>
+  </ul>
+  <li style="padding-bottom:0.9em">However, we have not checked the stability of the adaptive gain $G$</li>
+  <ul><li style="padding-bottom:0.9em">Consider `$V_2(\Delta G) \equiv \frac{1}{2}\text{tr}(\Delta G \sigma^{-1} \Delta G^*)$`</li>
+  <li style="padding-bottom:0.9em">`$\begin{align} \dot{V}_2 &= \text{tr}(\Delta \dot{G} \sigma^{-1} \Delta G^*) \\\ &= \text{tr}(-yy^* \sigma \sigma^{-1} \Delta G^*) \\\ &= -\text{tr}(y \underbrace{y^* \Delta G^*}_{w^*}) = -\text{tr}(w^* y) \ \text{scalar!}\\\ &=-(y,w) \end{align}$`</li>
+  </ul>
+</ul> 
+
+</div>
+
+
+<div class="col">
+<ul>
+  <li style="padding-bottom:0.9em">Which "conveniently" yields:</li>
+  <ul><li style="padding-bottom:0.9em">`$\begin{align}\dot{V}(x,\Delta G, t)&=\dot{V}_1(x,t)+ \dot{V}_2(\Delta G, t) \\\ &\leq -1/2 \lambda_{\text{min}}(Q) ||x||^2 +(y,w)-(y,w) \\\ &\leq -1/2 \lambda_{\text{min}}(Q) ||x||^2  \end{align}$`</li>
+  </ul>
+  <li style="padding-bottom:0.9em">Since $x,G$ are now bound, composite system is bound. $V$ is negative semidefinite. Therefore, by Lyapunov, $x \Rightarrow 0$.</li>
+</ul> 
+
+
+
+</div>
+</div>
+</section>
+
+<section>
+<h1> Augmentation example </h1>
+<h2> Double integrator example</h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<ul style="font-size:1.5vw">
+<li style="padding-bottom:0.9em">Returning to our double integrator example:</em></strong></li>
+<ul>
+  <li style="padding-bottom:0.9em"> $\dot{x} = \tilde{A}x+Bu, \ y=Cx$</li>
+  <li style="padding-bottom:0.9em"> $\tilde{A}=\begin{bmatrix} 0 & 1 \\\ 0 & 0 \end{bmatrix}$, $B=\begin{bmatrix} 0 \\\ 1 \end{bmatrix}$, $C=\begin{bmatrix} 1 &1 \end{bmatrix}$</li>
+  </ul>
+  <li style="padding-bottom:0.9em"> Adaptive regulator:</li>
+  <ul>
+  <li style="padding-bottom:0.9em"> $u = G y$</li>
+  </ul>
+  <li style="padding-bottom:0.9em"> With adaptive law:</li>
+  <ul>
+  <li style="padding-bottom:0.9em"> $\dot{G} = -y y^T \sigma, \ \sigma>0$</li>
+  </ul>
+</ul> 
+</div>
+
+
+
+<div class="col">
+
+<figure>
+  <img src="img/seminar/reg_integ.gif" alt="Trulli" width="800">
+  <figcaption>Adaptive controller is stable.</figcaption>
+</figure>
+
+
+
+</div>
+</div>
+</section>
+
+<section>
+<h1> Augmentation example </h1>
+<h2> Double integrator example</h2>
+<style>
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container vertical-center">
+
+<div class="col">
+
+<ul style="font-size:1.5vw">
+<li style="padding-bottom:0.9em">Returning to our double integrator example:</em></strong></li>
+<ul>
+  <li style="padding-bottom:0.9em"> $\dot{x} = \tilde{A}x+Bu, \ y=Cx$</li>
+  <li style="padding-bottom:0.9em"> $\tilde{A}=\begin{bmatrix} 0 & 1 \\\ 0 & 3 \end{bmatrix}$, $B=\begin{bmatrix} 0 \\\ 1 \end{bmatrix}$, $C=\begin{bmatrix} 1 &1 \end{bmatrix}$</li>
+  </ul>
+  <li style="padding-bottom:0.9em"> Adaptive regulator:</li>
+  <ul>
+  <li style="padding-bottom:0.9em"> $u = G y$</li>
+  </ul>
+  <li style="padding-bottom:0.9em"> With adaptive law:</li>
+  <ul>
+  <li style="padding-bottom:0.9em"> $\dot{G} = -y y^T \sigma, \ \sigma>0$</li>
+  </ul>
+</ul> 
+<blockquote>  Achieve exponential stability with exactly the same controller!</blockquote>
+</div>
+
+
+
+<div class="col">
+
+<figure>
+  <img src="img/seminar/reg_int3.gif" alt="Trulli" width="800">
+  <figcaption>Same controller is stable for a different plant.</figcaption>
+</figure>
+
+
+
+</div>
+</div>
+</section>
+
+
+
+
+
+
+---
+
+
+<!-- .slide: data-background="#003C71" class="dark" -->
+
+# Adaptive Unknown Input Estimators
 
 
 
@@ -759,6 +1290,46 @@ u_2(t)&=c_{11} +c_{22}t+c_{23}t^2+c_{24}t^3
 </div>
 
 </div>
+
+</section>
+
+<section>
+
+<h1> Application: Dynamic inversion for High Speed Projectile </h1>
+
+
+
+<h3> Adaptive DI scheme </h3>
+<figure>
+  <img src="img/seminar/DI_scheme.png" alt="Trulli" width="1200">
+</figure>
+<p>Most sensitive to error in outer loop coefficients: `$\dot{Z}_\alpha^{-1}=e_{A_z} A_z \sigma$` </p>
+
+
+
+
+
+
+
+</section>
+
+<section>
+
+<h1> Open problems: </h1>
+
+
+<ul style="font-size:2vw">
+<li style="padding-bottom:0.5em">Methods to certify flight critical systems not readily available</li>
+<ul>
+<li style="padding-bottom:0.5em">Existing validation methods are analogous but not immediate. </li>
+<li style="padding-bottom:0.5em">Stability margins? Validation of closed loop performance?</li>
+</ul> 
+
+
+
+
+
+
 
 </section>
 
