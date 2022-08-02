@@ -97,8 +97,8 @@ for id = 1:1:length(T)
     
     % Get frame as an image
     f = getframe(gcf);
-    set(p2,'XLim',([T(id)-2 T(id)+2]))
-    set(p1,'XLim',([T(id)-2 T(id)+2]))
+%     set(p2,'XLim',([T(id)-2 T(id)+2]))
+%     set(p1,'XLim',([T(id)-2 T(id)+2]))
     
     set(p1,'YLim',([-1 1]))
     set(p2,'YLim',([-1 1]))
@@ -215,11 +215,11 @@ for id = 1:1:length(T)
     
     % Get frame as an image
     f = getframe(gcf);
-    set(p2,'XLim',([T(id)-2 T(id)+2]))
-    set(p1,'XLim',([T(id)-2 T(id)+2]))
-    
-    set(p1,'YLim',([-1000 1000]))
-    set(p2,'YLim',([-2 2]))
+%     set(p2,'XLim',([T(id)-2 T(id)+2]))
+%     set(p1,'XLim',([T(id)-2 T(id)+2]))
+%     
+%     set(p1,'YLim',([-1000 1000]))
+%     set(p2,'YLim',([-2 2]))
 
     %set(p3,'YLim',([-0.01 0.01]))
     % Create a colormap for the first frame. For the rest of the frames,
@@ -334,11 +334,11 @@ for id = 1:1:length(T)
     
     % Get frame as an image
     f = getframe(gcf);
-    set(p2,'XLim',([T(id)-2 T(id)+2]))
-    set(p1,'XLim',([T(id)-2 T(id)+2]))
-    
-    set(p1,'YLim',([-6 6]))
-    set(p2,'YLim',([-2.5 2.5]))
+%     set(p2,'XLim',([T(id)-2 T(id)+2]))
+%     set(p1,'XLim',([T(id)-2 T(id)+2]))
+%     
+%     set(p1,'YLim',([-6 6]))
+%     set(p2,'YLim',([-2.5 2.5]))
 
     %set(p3,'YLim',([-0.01 0.01]))
     % Create a colormap for the first frame. For the rest of the frames,
