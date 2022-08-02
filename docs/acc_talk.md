@@ -433,7 +433,7 @@ background: #eaeaea;
 <div class="col">
 
 <figure>
-  <img src="img/seminar/step_re_pert_adapt.png" alt="Trulli" width="800">
+  <img src="img/seminar/static_aug.gif" alt="Trulli" width="800">
   <figcaption>Adaptive separation principle controller is stable.</figcaption>
 </figure>
 
