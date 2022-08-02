@@ -618,7 +618,7 @@ background: #eaeaea;
 <div class="col">
 
 <figure>
-  <img src="img/seminar/lyap.png" alt="Trulli" width="500">
+  <img src="img/seminar/lyap.PNG" alt="Trulli" width="500">
   <figcaption>Example Lyapunov candidate function</figcaption>
 </figure>
 
