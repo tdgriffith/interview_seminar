@@ -313,7 +313,7 @@ background: #eaeaea;
   <li style="padding-bottom:0.9em"> With set gains:</li>
   <ul>
   <li style="padding-bottom:0.9em"> $\sigma(\tilde{A}+BG) = 0.5 \pm 1.3j \Rightarrow G=\begin{bmatrix} -2 & -2 \end{bmatrix}$</li>
-  <li style="padding-bottom:0.9em"> $\sigma(\tilde{A}-KC) = -0.5 \pm 2.7j \Rightarrow K=\begin{bmatrix} 4 & 5 \end{bmatrix}^T$</li>
+  <li style="padding-bottom:0.9em"> $\sigma(\tilde{A}-KC) = -0.5 \pm 2.7j \Rightarrow K=\begin{bmatrix} -1 & 5 \end{bmatrix}^T$</li>
   </ul>
 </ul> 
 </div>
@@ -366,13 +366,13 @@ background: #eaeaea;
   </ul>
   <li style="padding-bottom:0.9em"> Adaptive separation principle controller:</li>
   <ul>
-  <li style="padding-bottom:0.9em"> $u = G\hat{x} + G_A y$</li>
+  <li style="padding-bottom:0.9em"> $u = G\hat{x} + L y$</li>
   <li style="padding-bottom:0.9em"> $\dot{\hat{x}}=A\hat{x} +Bu + K(y - \hat{y})$</li>
   <li style="padding-bottom:0.9em"> $\hat{y}=C \hat{x}$</li>
   </ul>
   <li style="padding-bottom:0.9em"> With same set gains and adaptive law:</li>
   <ul>
-  <li style="padding-bottom:0.9em"> $\dot{G}_A = -y y^T \sigma, \ \sigma>0$</li>
+  <li style="padding-bottom:0.9em"> $\dot{L} = -y y^T \sigma, \ \sigma>0$</li>
   </ul>
 </ul> 
 </div>
@@ -483,7 +483,7 @@ background: #eaeaea;
 <ul>
   <li style="padding-bottom:0.9em"> $M \equiv \text{rank }  B = \text{rank } C = M$ (square)</li>
   <li style="padding-bottom:0.9em"> $(A,B,C)$ ctrb/obsv</li>
-  <li style="padding-bottom:0.9em"> $M+P>N=\dim x$</li>
+  <li style="padding-bottom:0.9em"> $M\geq \frac{N+1}{2}; \ N=\dim x$</li>
   <ul>
   <li style="padding-bottom:0.9em"> `$\exists G_{\ast} \ni \sigma(A+BG_{\ast}C)$` that assigns pole locations arbitrarily</li>
   </ul>
@@ -517,7 +517,7 @@ background: #eaeaea;
 <li style="padding-bottom:0.9em">Ex:</li>
 <ul>
   <li style="padding-bottom:0.9em"> $A = \begin{bmatrix} 0 & 1 \\\ 0 & 0 \end{bmatrix}$, $B = \begin{bmatrix} 0 \\\ 1  \end{bmatrix}$, $C = \begin{bmatrix} 1 & \varepsilon \end{bmatrix}$</li>
-  <li style="padding-bottom:0.9em">With `$G_\ast=-g$`, $A+BGC = \begin{bmatrix} 0 & 1 \\\ -g & -g\varepsilon \end{bmatrix}$</li>
+  <li style="padding-bottom:0.9em">With `$G_\ast=-g$`, $A+BG_{*}C = \begin{bmatrix} 0 & 1 \\\ -g & -g\varepsilon \end{bmatrix}$</li>
   <li style="padding-bottom:0.9em"> $\det (\lambda I -A_c) = \lambda^2 + g\varepsilon \lambda + g$ </li>
   <li style="padding-bottom:0.9em"> $\therefore$ output feedback stabilizable when $\varepsilon > 0$ only!</li>
   <ul>
