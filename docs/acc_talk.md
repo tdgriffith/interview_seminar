@@ -5,7 +5,7 @@
 ## T. Griffith, Ph.D
 #### Seminar Interview
 
-#### July 30, 2022
+#### August 2022
 
 ---
 
@@ -521,7 +521,7 @@ background: #eaeaea;
   <li style="padding-bottom:0.9em"> $\det (\lambda I -A_c) = \lambda^2 + g\varepsilon \lambda + g$ </li>
   <li style="padding-bottom:0.9em"> $\therefore$ output feedback stabilizable when $\varepsilon > 0$ only!</li>
   <ul>
-  <li style="padding-bottom:0.9em"> Note: $\exists P>0 \ni A_c^T P + P A_c = -Q \ Q>0$</li>
+  <li style="padding-bottom:0.9em"> Note: $\exists P>0 \ni A_c^T P + P A_c = -Q, \ Q>0$</li>
   </ul>
   </ul>
 </ul> 
